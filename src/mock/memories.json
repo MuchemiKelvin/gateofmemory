@@ -1,0 +1,23 @@
+[
+  {
+    "id": "KGV-KSM-2024-0112",
+    "name": "John Doe",
+    "lifespan": "1964–2024",
+    "religion": "christian",
+    "profileImage": "/images/john.jpg",
+    "qrCodeUrl": "/qr/KGV-KSM-2024-0112.png",
+    "timeline": [
+      { "year": 1964, "event": "Born in London" },
+      { "year": 1990, "event": "Married Jane" },
+      { "year": 2024, "event": "Passed away peacefully" }
+    ],
+    "media": [
+      { "type": "image", "url": "/media/photo1.jpg", "caption": "Wedding day" },
+      { "type": "video", "url": "/media/video1.mp4", "caption": "Family vacation" },
+      { "type": "audio", "url": "/media/audio1.mp3", "caption": "Favorite song" },
+      { "type": "text", "content": "John was a loving father and friend." }
+    ],
+    "licenseExpiry": "2030-12-31",
+    "createdBy": "user123"
+  }
+]

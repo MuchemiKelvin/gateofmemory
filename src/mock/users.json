@@ -1,0 +1,10 @@
+[
+  {
+    "id": "user123",
+    "email": "jane.doe@example.com",
+    "passwordHash": "$2b$10$abcdef...",
+    "role": "admin",
+    "licenseTier": "premium",
+    "licenseExpiry": "2030-12-31"
+  }
+]
