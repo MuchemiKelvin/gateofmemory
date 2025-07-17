@@ -4,10 +4,12 @@ import { useParams } from 'next/navigation';
 import memories from '../../../mock/memories.json';
 import GateAnimation from '../../../components/memorial/GateAnimation';
 import MemorialPages from '../../../components/memorial/MemorialPages';
+import { Memorial } from '../../../types/memorial';
 
 export default function MemorialDetailPage() {
   const params = useParams();
-  const memorial = (memories as any[]).find(m => m.id === (params?.id ?? ''));
+  const memorials = memories as Memorial[];
+  const memorial = memorials.find(m => m.id === (params?.id ?? ''));
   const [showContent, setShowContent] = useState(false);
 
   if (!memorial) {

@@ -12,6 +12,7 @@ import MemorialPhotoGallery from './MemorialPhotoGallery';
 import MemorialVideoGallery from './MemorialVideoGallery';
 import MemorialAudioGallery from './MemorialAudioGallery';
 import MemorialTextStories from './MemorialTextStories';
+import { Memorial } from '../../types/memorial';
 
 const TABS = [
   { label: 'Info', key: 'info' },
@@ -22,7 +23,7 @@ const TABS = [
 ];
 
 interface MemorialPagesProps {
-  memorial: any;
+  memorial: Memorial;
 }
 
 const GateCardData = {
