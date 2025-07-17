@@ -12,6 +12,7 @@ import MemorialPhotoGallery from './MemorialPhotoGallery';
 import MemorialVideoGallery from './MemorialVideoGallery';
 import MemorialAudioGallery from './MemorialAudioGallery';
 import MemorialTextStories from './MemorialTextStories';
+import GeneratedQrCode from '../qr/GeneratedQrCode';
 import { Memorial } from '../../types/memorial';
 
 const TABS = [
@@ -49,7 +50,15 @@ const MemorialPages: React.FC<MemorialPagesProps> = ({ memorial }) => {
   const renderPage = () => {
     switch (TABS[page].key) {
       case 'info':
-        return <GateCard {...GateCardData} />;
+        return (
+          <div className="flex flex-col items-center gap-6">
+            <GateCard {...GateCardData} />
+            <GeneratedQrCode
+              value={typeof window !== 'undefined' ? window.location.origin + `/memorial/${memorial.id}` : `/memorial/${memorial.id}`}
+              label="Scan or share this QR to visit this memorial"
+            />
+          </div>
+        );
       case 'photos':
         return <MemorialPhotoGallery />;
       case 'videos':
